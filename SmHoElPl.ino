@@ -31,11 +31,14 @@ void loop() {
   // принимаем десятичное число, преобразуем к 
   switch ( operation )
      {        
-       case  0: {Serial.write(" 1 -2 ; 2 - 16"); operation++; dataIn = ""; digitalWrite(3, LOW);  break;};
+       case  0: {
+        Serial.write(" 1 -2 ; 2 - 16"); operation++; dataIn = ""; digitalWrite(3, LOW); //выключить лампочку
+        break;
+        };
        case  1: {if (dataIn.indexOf("1")>=0 | dataIn.indexOf("0")>=0 )
                  Serial.write("ok");
                  dataIn = "";
-                 digitalWrite(3, HIGH);
+                 digitalWrite(3, HIGH);  //включить лампочку
                  in = convert(dataIn);
                  Serial.write("sadsdfdfsgd");
                  operation+=1;
